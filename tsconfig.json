@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJs",
+    "esModuleInterop": true,
+    "outDir": "build",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "noImplicitThis": false,
+    "declarationDir": "types",
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "types": ["@bipboys/pwr-scoring"]
+  },
+  "extends": "@bipboys/typescript-preset/tsconfig.base.json",
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "index.ts"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
+}
+
