@@ -1,6 +1,15 @@
 # remix-pwr-indicator
 Remix password strength indicator based on wasm
 
+[![NPM](https://nodei.co/npm/@bipboys/remix-pwr-indicator.png?mini=true)](https://nodei.co/npm/@bipboys/remix-pwr-indicator/)
+
+[![NPM](https://nodei.co/npm/@bipboys/pwr-scoring.png?mini=true)](https://nodei.co/npm/@bipboys/pwr-scoring/)
+
+[![Version](https://img.shields.io/npm/v/@bipboys/remix-pwr-indicator.svg)](https://www.npmjs.com/package/@bipboys/remix-pwr-indicator)
+[![Version](https://img.shields.io/npm/v/@bipboys/pwr-scoring.svg)](https://www.npmjs.com/package/@bipboys/pwr-scoring)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![License](https://img.shields.io/npm/l/@bipboys/remix-pwr-indicator.svg)](https://www.npmjs.com/package/@bipboys/remix-pwr-indicator)
+
 ## Info
 Remix iplementation password indicator component based on wasm.
 
