@@ -21,7 +21,7 @@ $ npm install @bipboys/remix-pwr-indicator @bipboys/pwr-scoring
 ```
 ## Usage
 
-#### Add data route for work with wasm, like .../route/pwr.tsx
+#### Add data route for work with wasm, like .../routes/pwr.tsx
 
 > WASM are used to get the scoring value, but you can do use your own solution. Scoring get with zxcvbn rust package. Function scoring(password: string) return a value from 0 to 4. If you want to get all of the entropy data from zxcvbn package please use entropy(password: string) function.
 
@@ -79,6 +79,26 @@ export async function loader({ request }: LoaderArgs) {
        "#21A453",
      ]}
    />
+```
+
+#### Component Props
+
+```ts
+type StrengthTitleT = {
+  weak?: string;
+  bad?: string;
+  good?: string;
+  strong?: string;
+};
+
+interface PasswordStrengthIndicatorI {
+  score: number;
+  strengthColor?: string[];
+  strengthTitle?: StrengthTitleT;
+  showLabel?: boolean;
+  styleLabel?: React.CSSProperties;
+  styleIndicator?: React.CSSProperties;
+}
 ```
 
 ## Remix support
