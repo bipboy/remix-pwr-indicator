@@ -23,7 +23,7 @@ $ npm install @bipboys/remix-pwr-indicator @bipboys/pwr-scoring
 
 #### Add data route for work with wasm, like .../route/pwr.tsx
 
-> WASM are used to get the scoring value, but you can also use your own solution. Scoring get with zxcvbn rust package. Function scoring(password: string) return a value from 0 to 4. If you want to get all of the entropy data from zxcvbn package please use entropy(password: string) function.
+> WASM are used to get the scoring value, but you can do use your own solution. Scoring get with zxcvbn rust package. Function scoring(password: string) return a value from 0 to 4. If you want to get all of the entropy data from zxcvbn package please use entropy(password: string) function.
 
 ```ts
 import { LoaderArgs, json } from "@remix-run/node";
