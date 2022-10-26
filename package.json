@@ -1,6 +1,6 @@
 {
   "name": "@bipboys/remix-pwr-indicator",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "description": "Remix password strength indicator based on wasm ",
   "homepage": "https://github.com/bipboy/remix-pwr-indicator#readme",
   "bugs": {

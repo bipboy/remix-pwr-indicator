@@ -203,7 +203,7 @@ dependencies = [
 
 [[package]]
 name = "pwr-scoring"
-version = "0.1.2"
+version = "0.1.3"
 dependencies = [
  "serde",
  "serde-wasm-bindgen",
