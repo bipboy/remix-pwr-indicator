@@ -10,8 +10,7 @@
     "noImplicitThis": false,
     "declarationDir": "types",
     "emitDeclarationOnly": true,
-    "noEmit": false,
-    "types": ["@bipboys/pwr-scoring"]
+    "noEmit": false
   },
   "extends": "@bipboys/typescript-preset/tsconfig.base.json",
   "include": [

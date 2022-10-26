@@ -9,5 +9,5 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 wasm-bindgen = "0.2.83"
 zxcvbn = {version="2.2.1", features=["ser", "builder"]}
-serde = { version = "1.0.145", features = ["derive"] }
+serde = { version = "1.0.147", features = ["derive"] }
 serde-wasm-bindgen = "0.4.5"
