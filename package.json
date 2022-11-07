@@ -1,6 +1,6 @@
 {
   "name": "@bipboys/remix-pwr-indicator",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "description": "Remix password strength indicator based on wasm ",
   "homepage": "https://github.com/bipboy/remix-pwr-indicator#readme",
   "bugs": {
@@ -35,13 +35,13 @@
     "clean": "rimraf ./node_modules && pnpm build:clean"
   },
   "dependencies": {
-    "tslib": "^2.4.0"
+    "tslib": "^2.4.1"
   },
   "devDependencies": {
     "@bipboys/typescript-preset": "0.0.1",
     "@swc/cli": "^0.1.57",
-    "@swc/core": "^1.3.11",
-    "@types/react": "18.0.24",
+    "@swc/core": "^1.3.14",
+    "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
     "cross-env": "^7.0.3",
     "rimraf": "^3.0.2",
