@@ -33,7 +33,7 @@ pub struct CrackTimes {
 }
 
 #[derive(Clone, Debug, Serialize)]
-pub struct Scoring {
+pub struct Scoring<'a> {
     /// Get the amount of guesses needed to crack the password.
     pub guesses: String,
     /// Order of magnitude of `guesses`
@@ -46,17 +46,17 @@ pub struct Scoring {
     /// How long it took to calculate the answer.
     calc_time: Duration,
     /// Verbal feedback to help choose better passwords. Set when `score` <= 2.
-    feedback: Option<Feedback>,
+    feedback: Option<&'a Feedback>,
 }
 
 #[wasm_bindgen]
 pub fn entropy(password: &str) -> Result<JsValue, JsValue> {
-    let entropy = zxcvbn(password, &[]).unwrap();
+    let entropy = zxcvbn(password, &[]);
 
     let result = Scoring {
         guesses: entropy.guesses().to_string(),
         guesses_log10: entropy.guesses_log10(),
-        score: entropy.score(),
+        score: entropy.score().into(),
         crack_times: CrackTimes {
             guesses: entropy.crack_times().guesses().to_string(),
             online_throttling_100_per_hour: entropy
@@ -77,7 +77,7 @@ pub fn entropy(password: &str) -> Result<JsValue, JsValue> {
                 .to_string(),
         },
         calc_time: entropy.calculation_time(),
-        feedback: entropy.feedback().clone(),
+        feedback: entropy.feedback(),
     };
 
     Ok(serde_wasm_bindgen::to_value(&result)?)
@@ -85,7 +85,7 @@ pub fn entropy(password: &str) -> Result<JsValue, JsValue> {
 
 #[wasm_bindgen]
 pub fn scoring(password: &str) -> u8 {
-    let entropy = zxcvbn(password, &[]).unwrap();
+    let entropy = zxcvbn(password, &[]);
 
-    entropy.score()
+    entropy.score().into()
 }
